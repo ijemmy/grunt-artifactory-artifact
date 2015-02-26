@@ -23,7 +23,7 @@ module.exports = (grunt) ->
         deferred.resolve()
       )
 
-    else if ext in ['zip','jar','war']
+    else if ext in ['zip','jar','war','wgt']
       archive = new zip(temp_path)
       archive.extractAllTo(path, true);
       deferred.resolve()
@@ -165,7 +165,7 @@ module.exports = (grunt) ->
     filename = artifact.buildArtifactUri()
     archive = "#{options.path}#{filename}"
 
-    if(_s.endsWith(archive, '.war') || _s.endsWith(archive, '.wgt'))
+    if(_s.endsWith(archive, '.war')))
       mode = 'zip'
     else
       compress.options = {}
