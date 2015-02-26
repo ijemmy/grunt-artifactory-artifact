@@ -165,7 +165,7 @@ module.exports = (grunt) ->
     filename = artifact.buildArtifactUri()
     archive = "#{options.path}#{filename}"
 
-    if(_s.endsWith(archive, '.war' || _s.endsWith(archive, '.wgt')))
+    if(_s.endsWith(archive, '.war') || _s.endsWith(archive, '.wgt'))
       mode = 'zip'
     else
       compress.options = {}
